@@ -36,7 +36,7 @@ public class FuelHandler : MonoBehaviour
         fuelBar.slider.value=currentFuelValue;
         if(DateTime.Now>timeFuel){
             timeFuel=DateTime.Now.AddSeconds(1);
-            currentFuelValue=currentFuelValue-0.01f; 
+            currentFuelValue=currentFuelValue-0.03f; 
         }
 
         if(currentFuelValue<0){
