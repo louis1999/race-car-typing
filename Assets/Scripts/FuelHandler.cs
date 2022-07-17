@@ -4,9 +4,14 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 using System.Globalization;
+using System.Runtime.InteropServices;
 
 public class FuelHandler : MonoBehaviour
 {
+    // start react unity web gl
+    [DllImport("__Internal")]
+    private static extern void GameFinished (int score);
+    // end react unity web gl
 
 
     public SliderScripts fuelBar;
@@ -41,11 +46,13 @@ public class FuelHandler : MonoBehaviour
 
         if(currentFuelValue<0){
             // go to end scene 
-
             // the game is finished
+            #if UNITY_WEBGL == true && UNITY_EDITOR == false
+                GameFinished((int)(((DateTime.Now-startingTime).TotalSeconds)*14.0));
+            #endif
+
+
             // lets say that the car goes at 50km/h ==> 13,8889m/s
-            print((DateTime.Now-startingTime));
-            print((DateTime.Now-startingTime).TotalSeconds);
             distance = (float)(((DateTime.Now-startingTime).TotalSeconds)*14.0);
             SceneManager.LoadScene("EndScene");
 

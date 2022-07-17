@@ -40,8 +40,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/EndScene.unity:
     - Class: 1
@@ -65,17 +63,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 2908}
+      Script: {instanceID: 2918}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3322}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -126,31 +124,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 1562}
     - Class: 114
-      Script: {instanceID: 1802}
+      Script: {instanceID: 1810}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2488}
     - Class: 114
-      Script: {instanceID: 2566}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3016}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 3854}
+      Script: {instanceID: 3864}
     - Class: 114
-      Script: {instanceID: 5146}
+      Script: {instanceID: 5156}
     - Class: 114
-      Script: {instanceID: 5464}
+      Script: {instanceID: 5474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -205,21 +203,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2314}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2720}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 5322}
+      Script: {instanceID: 5332}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1028,4 +1026,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/RaceScene.unity
   - Assets/Scenes/EndScene.unity
-  playerPath: /Users/louisdaisomont/Desktop/RaceCarTypingExe
+  playerPath: /Users/louisdaisomont/Desktop/RaceCarTyping

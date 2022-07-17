@@ -18,7 +18,6 @@ public class ShowResults : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(distance);
         textResults.GetComponent<Text>().text = "Félicitations, vous avez parcouru "+distance+" mètres!";
     }
 

@@ -11,7 +11,7 @@ public class WordGenerator : MonoBehaviour
     public Vector2 center = new Vector2(0,-220);
     private float middle = 0F;
     private float bottom=100.0f;
-    private float letterOffset = 160.0F;
+    private float letterOffset = 110.0F;
     public GameObject letterPrefab;
     public GenerateCar car;
     public GameObject canvas;
@@ -33,7 +33,6 @@ public class WordGenerator : MonoBehaviour
         middle = canvas.GetComponent<RectTransform>().transform.position.x;
         GameObject[] objs = GameObject.FindGameObjectsWithTag("UserWords");
         ReactWebController rwc = objs[0].GetComponent<ReactWebController>();
-          
         if(rwc.userWords.ToArray().Length!=0){
             words = rwc.userWords.ToArray();
         }
@@ -81,9 +80,6 @@ public class WordGenerator : MonoBehaviour
                 
                 
                 // if a word is finished, we can gain some fuel
-                print(words.Length);
-                print(words[currentWord]);
-                print(words[currentWord].Length);
                 int totalLength = words[currentWord].Length;
                 GainFuel(totalLength, errors);
                 errors=0;

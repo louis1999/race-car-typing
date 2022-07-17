@@ -60,100 +60,102 @@ extern void ChooseCar__cctor_m41F4B6F2F5F5166DA0CDA6B4BE99CBEF2024A897 (void);
 extern void Follower_Update_mA506F378D60DF9E943159832FDC73133762463FB (void);
 // 0x00000018 System.Void Follower::.ctor()
 extern void Follower__ctor_m48CCAC56ED67C12739E6201C679F206DB7FE7FCA (void);
-// 0x00000019 System.Void FuelHandler::Start()
+// 0x00000019 System.Void FuelHandler::GameFinished(System.Int32)
+extern void FuelHandler_GameFinished_m9A3C06B745A32BD82124AF580D8C1C9E15084ACB (void);
+// 0x0000001A System.Void FuelHandler::Start()
 extern void FuelHandler_Start_mB20BA8085B6908D1F872F9E84D745DEDBFCC9600 (void);
-// 0x0000001A System.Void FuelHandler::Update()
+// 0x0000001B System.Void FuelHandler::Update()
 extern void FuelHandler_Update_mCEFF630F5BAA0F6C9C849BC3FBBFA11515C54EF3 (void);
-// 0x0000001B System.Void FuelHandler::GetFuel(System.Single)
+// 0x0000001C System.Void FuelHandler::GetFuel(System.Single)
 extern void FuelHandler_GetFuel_m0E098EBE7948E4A4AD5C7B0981D60F5FA824EBA3 (void);
-// 0x0000001C System.Void FuelHandler::OnDisable()
+// 0x0000001D System.Void FuelHandler::OnDisable()
 extern void FuelHandler_OnDisable_m054EC3D38488737E8F30022DE6FD479160FA8DA8 (void);
-// 0x0000001D System.Void FuelHandler::.ctor()
+// 0x0000001E System.Void FuelHandler::.ctor()
 extern void FuelHandler__ctor_m9B762A1F9FE28345C81B3FD123F3B4FE0BBCDB6A (void);
-// 0x0000001E System.Void GenerateCar::Start()
+// 0x0000001F System.Void GenerateCar::Start()
 extern void GenerateCar_Start_m02280F5D155A972E04DC4DE0E68CFFC146BFCC15 (void);
-// 0x0000001F System.Void GenerateCar::OnEnable()
+// 0x00000020 System.Void GenerateCar::OnEnable()
 extern void GenerateCar_OnEnable_m257FAB1EDFBF5D32BBD986B73BDD695190B5AC68 (void);
-// 0x00000020 System.Void GenerateCar::.ctor()
+// 0x00000021 System.Void GenerateCar::.ctor()
 extern void GenerateCar__ctor_m58136728ABDA7B20AEC3B3E4A33A10303F9725E4 (void);
-// 0x00000021 System.Void ReactWebController::Awake()
+// 0x00000022 System.Void ReactWebController::Awake()
 extern void ReactWebController_Awake_m1946CCF71D56F3664D1E5D4E608B86FF03F4D583 (void);
-// 0x00000022 System.Void ReactWebController::SetWord(System.String)
+// 0x00000023 System.Void ReactWebController::SetWord(System.String)
 extern void ReactWebController_SetWord_m9EB87029ADE626140F0EB0D7203D5D69EC0E0592 (void);
-// 0x00000023 System.Void ReactWebController::.ctor()
+// 0x00000024 System.Void ReactWebController::.ctor()
 extern void ReactWebController__ctor_mE461970C784824D86B2D2824D91A798C599EAEAA (void);
-// 0x00000024 System.Void ShowResults::Start()
+// 0x00000025 System.Void ShowResults::Start()
 extern void ShowResults_Start_mF9F7AE3B72F7D2A71B28BE6D7F70CF4404F90732 (void);
-// 0x00000025 System.Void ShowResults::Update()
+// 0x00000026 System.Void ShowResults::Update()
 extern void ShowResults_Update_mC9C39140F7BCAB1230F381D97B2D3E1D63CD6E44 (void);
-// 0x00000026 System.Void ShowResults::OnEnable()
+// 0x00000027 System.Void ShowResults::OnEnable()
 extern void ShowResults_OnEnable_m342662E7E085C6FFF12D3F6F3640723CAFE0F0D3 (void);
-// 0x00000027 System.Void ShowResults::.ctor()
+// 0x00000028 System.Void ShowResults::.ctor()
 extern void ShowResults__ctor_m3A032CDDEF772BE70431715AA4D474B8F9BDFE26 (void);
-// 0x00000028 System.Void WordGenerator::Start()
+// 0x00000029 System.Void WordGenerator::Start()
 extern void WordGenerator_Start_m7A768AA26CC51F6FF9AEA458FFF99DDFCE15AFF7 (void);
-// 0x00000029 System.Void WordGenerator::FixedUpdate()
+// 0x0000002A System.Void WordGenerator::FixedUpdate()
 extern void WordGenerator_FixedUpdate_m72A720117CCCE5013993CAD89C02E9A8969E534B (void);
-// 0x0000002A System.Void WordGenerator::Update()
+// 0x0000002B System.Void WordGenerator::Update()
 extern void WordGenerator_Update_m219FEB48B886EA124312983072EFD2F93D011F07 (void);
-// 0x0000002B System.Void WordGenerator::GenerateWord(System.String)
+// 0x0000002C System.Void WordGenerator::GenerateWord(System.String)
 extern void WordGenerator_GenerateWord_mB48B346F20DA91C42F0F6193ED17F43EBA7549F4 (void);
-// 0x0000002C System.Void WordGenerator::GenerateLetter(System.String,System.Single)
+// 0x0000002D System.Void WordGenerator::GenerateLetter(System.String,System.Single)
 extern void WordGenerator_GenerateLetter_mF4C72FB5061102876F31283AD28167B0F53FF024 (void);
-// 0x0000002D System.Void WordGenerator::DestroyList()
+// 0x0000002E System.Void WordGenerator::DestroyList()
 extern void WordGenerator_DestroyList_mADFC7CA186CE13660776B10CAE2F8F8CB48ECA0D (void);
-// 0x0000002E System.Void WordGenerator::GainFuel(System.Int32,System.Int32)
+// 0x0000002F System.Void WordGenerator::GainFuel(System.Int32,System.Int32)
 extern void WordGenerator_GainFuel_m65DBE4E639595BCA93FC55676BD634DC5F4D28A7 (void);
-// 0x0000002F System.Void WordGenerator::.ctor()
+// 0x00000030 System.Void WordGenerator::.ctor()
 extern void WordGenerator__ctor_m217CFB1F2486E1EA094502F4498F22E57F18BA87 (void);
-// 0x00000030 System.Void PathCreation.Examples.GeneratePathExample::Start()
+// 0x00000031 System.Void PathCreation.Examples.GeneratePathExample::Start()
 extern void GeneratePathExample_Start_m54ECFCE16D33C7551D85347F7919C1507740FF36 (void);
-// 0x00000031 System.Void PathCreation.Examples.GeneratePathExample::.ctor()
+// 0x00000032 System.Void PathCreation.Examples.GeneratePathExample::.ctor()
 extern void GeneratePathExample__ctor_mF9D75A6798ECEE60D8D8AC57DE65134A29A857F3 (void);
-// 0x00000032 System.Void PathCreation.Examples.PathFollower::Start()
+// 0x00000033 System.Void PathCreation.Examples.PathFollower::Start()
 extern void PathFollower_Start_m866138E76BB0CE6444C5A8697918777BD1C360C3 (void);
-// 0x00000033 System.Void PathCreation.Examples.PathFollower::Update()
+// 0x00000034 System.Void PathCreation.Examples.PathFollower::Update()
 extern void PathFollower_Update_m2F8DF1C0FEECCBDC6993F3222A70CDA3DEF1A1A6 (void);
-// 0x00000034 System.Void PathCreation.Examples.PathFollower::OnPathChanged()
+// 0x00000035 System.Void PathCreation.Examples.PathFollower::OnPathChanged()
 extern void PathFollower_OnPathChanged_mD1E140664718AD55E2F022C41283DF659D97B55F (void);
-// 0x00000035 System.Void PathCreation.Examples.PathFollower::.ctor()
+// 0x00000036 System.Void PathCreation.Examples.PathFollower::.ctor()
 extern void PathFollower__ctor_m6C93B97567752EA43B328B22385E2BBAD0B860F8 (void);
-// 0x00000036 System.Void PathCreation.Examples.PathPlacer::Generate()
+// 0x00000037 System.Void PathCreation.Examples.PathPlacer::Generate()
 extern void PathPlacer_Generate_m0B542C50637807F19181B152FB4550499252FE40 (void);
-// 0x00000037 System.Void PathCreation.Examples.PathPlacer::DestroyObjects()
+// 0x00000038 System.Void PathCreation.Examples.PathPlacer::DestroyObjects()
 extern void PathPlacer_DestroyObjects_mCD87024959669262FB4221C73BF2829F1C00874F (void);
-// 0x00000038 System.Void PathCreation.Examples.PathPlacer::PathUpdated()
+// 0x00000039 System.Void PathCreation.Examples.PathPlacer::PathUpdated()
 extern void PathPlacer_PathUpdated_mF6406F780440B7F3CEFD8FD9F48153ECC3942F0C (void);
-// 0x00000039 System.Void PathCreation.Examples.PathPlacer::.ctor()
+// 0x0000003A System.Void PathCreation.Examples.PathPlacer::.ctor()
 extern void PathPlacer__ctor_mBD55E0229629CAC01164461BA39B6AEDDF593ED8 (void);
-// 0x0000003A System.Void PathCreation.Examples.PathSceneTool::add_onDestroyed(System.Action)
+// 0x0000003B System.Void PathCreation.Examples.PathSceneTool::add_onDestroyed(System.Action)
 extern void PathSceneTool_add_onDestroyed_mD65E8E77587E6A191725235B2E2FB706648EC023 (void);
-// 0x0000003B System.Void PathCreation.Examples.PathSceneTool::remove_onDestroyed(System.Action)
+// 0x0000003C System.Void PathCreation.Examples.PathSceneTool::remove_onDestroyed(System.Action)
 extern void PathSceneTool_remove_onDestroyed_m663C19C39D586FBBA991EDC15A3FDA9D6632DBF2 (void);
-// 0x0000003C PathCreation.VertexPath PathCreation.Examples.PathSceneTool::get_path()
+// 0x0000003D PathCreation.VertexPath PathCreation.Examples.PathSceneTool::get_path()
 extern void PathSceneTool_get_path_m41FCC129BA30CC85592516526B91644B4FE3DBCC (void);
-// 0x0000003D System.Void PathCreation.Examples.PathSceneTool::TriggerUpdate()
+// 0x0000003E System.Void PathCreation.Examples.PathSceneTool::TriggerUpdate()
 extern void PathSceneTool_TriggerUpdate_mD3802E14ACEDCBD90EA2C6E7C28CC93862242551 (void);
-// 0x0000003E System.Void PathCreation.Examples.PathSceneTool::OnDestroy()
+// 0x0000003F System.Void PathCreation.Examples.PathSceneTool::OnDestroy()
 extern void PathSceneTool_OnDestroy_m01EB8B939EC3F9120B98A0D04C5DB947D9703114 (void);
-// 0x0000003F System.Void PathCreation.Examples.PathSceneTool::PathUpdated()
-// 0x00000040 System.Void PathCreation.Examples.PathSceneTool::.ctor()
+// 0x00000040 System.Void PathCreation.Examples.PathSceneTool::PathUpdated()
+// 0x00000041 System.Void PathCreation.Examples.PathSceneTool::.ctor()
 extern void PathSceneTool__ctor_m6E55CF62A20904147C706312B4F59F61BCB22928 (void);
-// 0x00000041 System.Void PathCreation.Examples.PathSpawner::Start()
+// 0x00000042 System.Void PathCreation.Examples.PathSpawner::Start()
 extern void PathSpawner_Start_m42507F85EB922E71517AB52A96AD790BD0C31FAB (void);
-// 0x00000042 System.Void PathCreation.Examples.PathSpawner::.ctor()
+// 0x00000043 System.Void PathCreation.Examples.PathSpawner::.ctor()
 extern void PathSpawner__ctor_m36369783107993E0A80EA36D26B246680732E045 (void);
-// 0x00000043 System.Void PathCreation.Examples.RoadMeshCreator::PathUpdated()
+// 0x00000044 System.Void PathCreation.Examples.RoadMeshCreator::PathUpdated()
 extern void RoadMeshCreator_PathUpdated_m5A895583932CE87733070DEB4D62097039733261 (void);
-// 0x00000044 System.Void PathCreation.Examples.RoadMeshCreator::CreateRoadMesh()
+// 0x00000045 System.Void PathCreation.Examples.RoadMeshCreator::CreateRoadMesh()
 extern void RoadMeshCreator_CreateRoadMesh_m5C9EE98C60A2CE349C4002E459349557959292DE (void);
-// 0x00000045 System.Void PathCreation.Examples.RoadMeshCreator::AssignMeshComponents()
+// 0x00000046 System.Void PathCreation.Examples.RoadMeshCreator::AssignMeshComponents()
 extern void RoadMeshCreator_AssignMeshComponents_mF3F1BB8B22CEE9A674A1B90C054CA7B5511FB149 (void);
-// 0x00000046 System.Void PathCreation.Examples.RoadMeshCreator::AssignMaterials()
+// 0x00000047 System.Void PathCreation.Examples.RoadMeshCreator::AssignMaterials()
 extern void RoadMeshCreator_AssignMaterials_mB178928025D0A6728E2737FC54C1E2A538DE093E (void);
-// 0x00000047 System.Void PathCreation.Examples.RoadMeshCreator::.ctor()
+// 0x00000048 System.Void PathCreation.Examples.RoadMeshCreator::.ctor()
 extern void RoadMeshCreator__ctor_m040EC5905FD18CD4CAD266191C129FEB18A0C357 (void);
-static Il2CppMethodPointer s_methodPointers[71] = 
+static Il2CppMethodPointer s_methodPointers[72] = 
 {
 	SliderScripts_Start_mB80441D3AF218ACA367485631119961BEF34F55F,
 	SliderScripts_FillSlider_m427E4FF54E88039DF974427DED78E5DCC46439C6,
@@ -179,6 +181,7 @@ static Il2CppMethodPointer s_methodPointers[71] =
 	ChooseCar__cctor_m41F4B6F2F5F5166DA0CDA6B4BE99CBEF2024A897,
 	Follower_Update_mA506F378D60DF9E943159832FDC73133762463FB,
 	Follower__ctor_m48CCAC56ED67C12739E6201C679F206DB7FE7FCA,
+	FuelHandler_GameFinished_m9A3C06B745A32BD82124AF580D8C1C9E15084ACB,
 	FuelHandler_Start_mB20BA8085B6908D1F872F9E84D745DEDBFCC9600,
 	FuelHandler_Update_mCEFF630F5BAA0F6C9C849BC3FBBFA11515C54EF3,
 	FuelHandler_GetFuel_m0E098EBE7948E4A4AD5C7B0981D60F5FA824EBA3,
@@ -227,86 +230,87 @@ static Il2CppMethodPointer s_methodPointers[71] =
 	RoadMeshCreator_AssignMaterials_mB178928025D0A6728E2737FC54C1E2A538DE093E,
 	RoadMeshCreator__ctor_m040EC5905FD18CD4CAD266191C129FEB18A0C357,
 };
-static const int32_t s_InvokerIndices[71] = 
+static const int32_t s_InvokerIndices[72] = 
 {
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	840,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1324,
-	1580,
-	2547,
-	1580,
-	1580,
-	1580,
-	1580,
-	1344,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1324,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1324,
-	843,
-	1580,
-	776,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1324,
-	1324,
-	1547,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
-	1580,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	627,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	961,
+	1120,
+	1920,
+	1120,
+	1120,
+	1883,
+	1120,
+	1120,
+	979,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	961,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	961,
+	630,
+	1120,
+	580,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	961,
+	961,
+	1089,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
+	1120,
 };
 extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	71,
+	72,
 	s_methodPointers,
 	0,
 	NULL,
