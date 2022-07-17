@@ -29,7 +29,12 @@ public class WordGenerator : MonoBehaviour
     // variables for the typing of ONE word
     private int errors=0;
 
+    private bool is_letter_false=false;// if the user typed wrongly once the error, we only count it once
+
+
     void Start(){
+
+
         middle = canvas.GetComponent<RectTransform>().transform.position.x;
         GameObject[] objs = GameObject.FindGameObjectsWithTag("UserWords");
         ReactWebController rwc = objs[0].GetComponent<ReactWebController>();
@@ -37,7 +42,6 @@ public class WordGenerator : MonoBehaviour
             words = rwc.userWords.ToArray();
         }
         currentWord=UnityEngine.Random.Range(0, words.Length);
-        
 
     }
 
@@ -53,13 +57,15 @@ public class WordGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if(!gameFinished){
             if(!currentWordStarted){
                 GenerateWord(words[currentWord]);
                 currentWordStarted=true;
+                fuel.UpdateText(" ");
+                fuel.UpdateTextTyped(" ");
             }
         }
+       
 
         foreach (char letterPressed in Input.inputString)
         {
@@ -67,10 +73,22 @@ public class WordGenerator : MonoBehaviour
             if(letterPressed==words[currentWord][currentIndex]){
                 letters[currentIndex].GetComponent<Image>().color = Color.green;
                 currentIndex++; // we increment the value here, so the user has to type the letter again if he is false
+
+                fuel.UpdateText(Char.ToString(letterPressed));// increment the text that the user should to type
+                if(!is_letter_false){
+                    fuel.UpdateTextTyped(Char.ToString(letterPressed)); // increment the text the user is typing
+                }
+                is_letter_false=false; // reset is_letter_false to false for the new letter
+
             }
             else{ // the user has type a wrong letter
                 letters[currentIndex].GetComponent<Image>().color = Color.red;
                 errors+=1;
+
+                if(!is_letter_false){ // if it is the first time the user type a false key for that letter
+                    is_letter_false=true; // set to true so we don't add multiple times the wrong letter
+                    fuel.UpdateTextTyped(Char.ToString(letterPressed));  // add the error to the text typed
+                }
             }
 
             

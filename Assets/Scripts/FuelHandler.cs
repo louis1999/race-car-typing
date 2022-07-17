@@ -10,7 +10,7 @@ public class FuelHandler : MonoBehaviour
 {
     // start react unity web gl
     [DllImport("__Internal")]
-    private static extern void GameFinished (int score);
+    private static extern void GameFinished (string text, string text_typed, int duration);
     // end react unity web gl
 
 
@@ -23,6 +23,10 @@ public class FuelHandler : MonoBehaviour
     private DateTime timeFuel;
 
     private float distance=0.0f;
+
+
+    private string text="";
+    private string text_typed="";
 
 
 
@@ -48,7 +52,7 @@ public class FuelHandler : MonoBehaviour
             // go to end scene 
             // the game is finished
             #if UNITY_WEBGL == true && UNITY_EDITOR == false
-                GameFinished((int)(((DateTime.Now-startingTime).TotalSeconds)*14.0));
+                GameFinished(text, text_typed, (int)(((DateTime.Now-startingTime).TotalSeconds)));
             #endif
 
 
@@ -69,6 +73,20 @@ public class FuelHandler : MonoBehaviour
             currentFuelValue+=gain;
         }
     }
+
+    /* Update the text that the user should type */
+    /* it will be sent to react afterwards */
+    public void UpdateText(string letter){
+        text = text + letter;
+    }
+
+    /* Update the text that the user is typing */
+    /* it will be sent to react afterwards */
+    public void UpdateTextTyped(string letter){
+        text_typed = text_typed + letter;
+    }
+
+
 
     void OnDisable()
     {

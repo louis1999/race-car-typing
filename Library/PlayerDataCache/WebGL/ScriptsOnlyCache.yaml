@@ -40,6 +40,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/EndScene.unity:
     - Class: 1
@@ -63,17 +65,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2300}
     - Class: 114
-      Script: {instanceID: 2720}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 2918}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3316}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -126,29 +128,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1562}
     - Class: 114
-      Script: {instanceID: 1810}
+      Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2300}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2574}
+      Script: {instanceID: 2568}
     - Class: 114
-      Script: {instanceID: 2720}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 3010}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3316}
     - Class: 114
-      Script: {instanceID: 3864}
+      Script: {instanceID: 3858}
     - Class: 114
-      Script: {instanceID: 5156}
+      Script: {instanceID: 5150}
     - Class: 114
-      Script: {instanceID: 5474}
+      Script: {instanceID: 5468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -203,21 +205,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2300}
     - Class: 114
-      Script: {instanceID: 2322}
+      Script: {instanceID: 2316}
     - Class: 114
-      Script: {instanceID: 2720}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3316}
     - Class: 114
-      Script: {instanceID: 5332}
+      Script: {instanceID: 5326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
