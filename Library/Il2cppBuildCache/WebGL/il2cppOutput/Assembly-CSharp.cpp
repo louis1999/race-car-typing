@@ -5227,6 +5227,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double TimeSpan_get_TotalSeconds_m28CDC7B9ADF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FuelHandler_GameFinished_mE738C1E9F7CFDBCFDA66C3C3971C095C9CF3E1B0 (String_t* ___text0, String_t* ___text_typed1, int32_t ___duration2, const RuntimeMethod* method);
 // System.String System.String::Concat(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method);
+// System.Int32 System.String::get_Length()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline (String_t* __this, const RuntimeMethod* method);
 // System.Void UnityEngine.PlayerPrefs::SetFloat(System.String,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetFloat_mF660C042621E97A05AD99134DBDD9B1205CDD214 (String_t* ___key0, float ___value1, const RuntimeMethod* method);
 // System.Boolean System.String::op_Equality(System.String,System.String)
@@ -5475,6 +5477,8 @@ inline FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * GameObject_GetCom
 }
 // System.Void WordGenerator::GenerateWord(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordGenerator_GenerateWord_mB48B346F20DA91C42F0F6193ED17F43EBA7549F4 (WordGenerator_t5D92F9CF285E9ADA85018CD67C2950EF6B8B4E63 * __this, String_t* ___word0, const RuntimeMethod* method);
+// System.Boolean FuelHandler::FirstCharacter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FuelHandler_FirstCharacter_m47FA88AA6E138D7CA52BF6E15805223B1FC70F37 (FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * __this, const RuntimeMethod* method);
 // System.Void FuelHandler::UpdateText(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FuelHandler_UpdateText_mDCC7BDE0ECA2EE9F19E7500604B60EA297C56C68 (FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * __this, String_t* ___letter0, const RuntimeMethod* method);
 // System.Void FuelHandler::UpdateTextTyped(System.String)
@@ -5499,8 +5503,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7 (Il2CppChar ___c0, const RuntimeMethod* method);
 // UnityEngine.Color UnityEngine.Color::get_red()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  Color_get_red_m9BD55EBF7A74A515330FA5F7AC7A67C8A8913DD8 (const RuntimeMethod* method);
-// System.Int32 System.String::get_Length()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline (String_t* __this, const RuntimeMethod* method);
 // System.Void WordGenerator::GainFuel(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordGenerator_GainFuel_m65DBE4E639595BCA93FC55676BD634DC5F4D28A7 (WordGenerator_t5D92F9CF285E9ADA85018CD67C2950EF6B8B4E63 * __this, int32_t ___length0, int32_t ___errors1, const RuntimeMethod* method);
 // System.Void WordGenerator::DestroyList()
@@ -6250,6 +6252,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FuelHandler_UpdateTextTyped_m4C4BA60341A
 		__this->set_text_typed_11(L_2);
 		// }
 		return;
+	}
+}
+// System.Boolean FuelHandler::FirstCharacter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FuelHandler_FirstCharacter_m47FA88AA6E138D7CA52BF6E15805223B1FC70F37 (FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * __this, const RuntimeMethod* method)
+{
+	{
+		// return text.Length==0;
+		String_t* L_0 = __this->get_text_10();
+		int32_t L_1;
+		L_1 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_0, /*hidden argument*/NULL);
+		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
 // System.Void FuelHandler::OnDisable()
@@ -8288,7 +8301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordGenerator_Update_m219FEB48B886EA1243
 		bool L_0 = __this->get_gameFinished_17();
 		if (L_0)
 		{
-			goto IL_004a;
+			goto IL_0057;
 		}
 	}
 	{
@@ -8296,7 +8309,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordGenerator_Update_m219FEB48B886EA1243
 		bool L_1 = __this->get_currentWordStarted_15();
 		if (L_1)
 		{
-			goto IL_004a;
+			goto IL_0057;
 		}
 	}
 	{
@@ -8308,185 +8321,206 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordGenerator_Update_m219FEB48B886EA1243
 		WordGenerator_GenerateWord_mB48B346F20DA91C42F0F6193ED17F43EBA7549F4(__this, L_5, /*hidden argument*/NULL);
 		// currentWordStarted=true;
 		__this->set_currentWordStarted_15((bool)1);
-		// fuel.UpdateText(" ");
+		// if(!fuel.FirstCharacter()){
 		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_6 = __this->get_fuel_11();
-		FuelHandler_UpdateText_mDCC7BDE0ECA2EE9F19E7500604B60EA297C56C68(L_6, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, /*hidden argument*/NULL);
-		// fuel.UpdateTextTyped(" ");
-		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_7 = __this->get_fuel_11();
-		FuelHandler_UpdateTextTyped_m4C4BA60341A89DBDD3F6176EB1FA56896F4010C2(L_7, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, /*hidden argument*/NULL);
+		bool L_7;
+		L_7 = FuelHandler_FirstCharacter_m47FA88AA6E138D7CA52BF6E15805223B1FC70F37(L_6, /*hidden argument*/NULL);
+		if (L_7)
+		{
+			goto IL_0057;
+		}
 	}
-
-IL_004a:
 	{
-		// foreach (char letterPressed in Input.inputString)
-		String_t* L_8;
-		L_8 = Input_get_inputString_mF7460B051369C1E9B02CA8F8D515E76E0B83D473(/*hidden argument*/NULL);
-		V_0 = L_8;
-		V_1 = 0;
-		goto IL_0196;
+		// fuel.UpdateText(" ");
+		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_8 = __this->get_fuel_11();
+		FuelHandler_UpdateText_mDCC7BDE0ECA2EE9F19E7500604B60EA297C56C68(L_8, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, /*hidden argument*/NULL);
+		// fuel.UpdateTextTyped(" ");
+		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_9 = __this->get_fuel_11();
+		FuelHandler_UpdateTextTyped_m4C4BA60341A89DBDD3F6176EB1FA56896F4010C2(L_9, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, /*hidden argument*/NULL);
 	}
 
 IL_0057:
 	{
 		// foreach (char letterPressed in Input.inputString)
-		String_t* L_9 = V_0;
-		int32_t L_10 = V_1;
-		Il2CppChar L_11;
-		L_11 = String_get_Chars_m9B1A5E4C8D70AA33A60F03735AF7B77AB9DBBA70(L_9, L_10, /*hidden argument*/NULL);
-		V_2 = L_11;
+		String_t* L_10;
+		L_10 = Input_get_inputString_mF7460B051369C1E9B02CA8F8D515E76E0B83D473(/*hidden argument*/NULL);
+		V_0 = L_10;
+		V_1 = 0;
+		goto IL_01cb;
+	}
+
+IL_0064:
+	{
+		// foreach (char letterPressed in Input.inputString)
+		String_t* L_11 = V_0;
+		int32_t L_12 = V_1;
+		Il2CppChar L_13;
+		L_13 = String_get_Chars_m9B1A5E4C8D70AA33A60F03735AF7B77AB9DBBA70(L_11, L_12, /*hidden argument*/NULL);
+		V_2 = L_13;
 		// if(letterPressed==words[currentWord][currentIndex]){
-		Il2CppChar L_12 = V_2;
-		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_13 = __this->get_words_16();
-		int32_t L_14 = __this->get_currentWord_14();
-		int32_t L_15 = L_14;
-		String_t* L_16 = (L_13)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_15));
-		int32_t L_17 = __this->get_currentIndex_13();
-		Il2CppChar L_18;
-		L_18 = String_get_Chars_m9B1A5E4C8D70AA33A60F03735AF7B77AB9DBBA70(L_16, L_17, /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_12) == ((uint32_t)L_18))))
+		Il2CppChar L_14 = V_2;
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_15 = __this->get_words_16();
+		int32_t L_16 = __this->get_currentWord_14();
+		int32_t L_17 = L_16;
+		String_t* L_18 = (L_15)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_17));
+		int32_t L_19 = __this->get_currentIndex_13();
+		Il2CppChar L_20;
+		L_20 = String_get_Chars_m9B1A5E4C8D70AA33A60F03735AF7B77AB9DBBA70(L_18, L_19, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_14) == ((uint32_t)L_20))))
 		{
-			goto IL_00db;
+			goto IL_00e8;
 		}
 	}
 	{
 		// letters[currentIndex].GetComponent<Image>().color = Color.green;
-		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_19 = __this->get_letters_12();
-		int32_t L_20 = __this->get_currentIndex_13();
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_21;
-		L_21 = List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_inline(L_19, L_20, /*hidden argument*/List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_RuntimeMethod_var);
-		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_22;
-		L_22 = GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710(L_21, /*hidden argument*/GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710_RuntimeMethod_var);
-		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_23;
-		L_23 = Color_get_green_mFF9BD42534D385A0717B1EAD083ADF08712984B9(/*hidden argument*/NULL);
-		VirtActionInvoker1< Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_22, L_23);
+		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_21 = __this->get_letters_12();
+		int32_t L_22 = __this->get_currentIndex_13();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_23;
+		L_23 = List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_inline(L_21, L_22, /*hidden argument*/List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_RuntimeMethod_var);
+		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_24;
+		L_24 = GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710(L_23, /*hidden argument*/GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710_RuntimeMethod_var);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_25;
+		L_25 = Color_get_green_mFF9BD42534D385A0717B1EAD083ADF08712984B9(/*hidden argument*/NULL);
+		VirtActionInvoker1< Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_24, L_25);
 		// currentIndex++; // we increment the value here, so the user has to type the letter again if he is false
-		int32_t L_24 = __this->get_currentIndex_13();
-		__this->set_currentIndex_13(((int32_t)il2cpp_codegen_add((int32_t)L_24, (int32_t)1)));
-		// fuel.UpdateText(Char.ToString(letterPressed));// increment the text that the user should to type
-		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_25 = __this->get_fuel_11();
-		Il2CppChar L_26 = V_2;
-		IL2CPP_RUNTIME_CLASS_INIT(Char_tFF60D8E7E89A20BE2294A003734341BD1DF43E14_il2cpp_TypeInfo_var);
-		String_t* L_27;
-		L_27 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_26, /*hidden argument*/NULL);
-		FuelHandler_UpdateText_mDCC7BDE0ECA2EE9F19E7500604B60EA297C56C68(L_25, L_27, /*hidden argument*/NULL);
+		int32_t L_26 = __this->get_currentIndex_13();
+		__this->set_currentIndex_13(((int32_t)il2cpp_codegen_add((int32_t)L_26, (int32_t)1)));
 		// if(!is_letter_false){
-		bool L_28 = __this->get_is_letter_false_19();
-		if (L_28)
+		bool L_27 = __this->get_is_letter_false_19();
+		if (L_27)
 		{
-			goto IL_00d2;
+			goto IL_00df;
 		}
 	}
 	{
 		// fuel.UpdateTextTyped(Char.ToString(letterPressed)); // increment the text the user is typing
-		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_29 = __this->get_fuel_11();
-		Il2CppChar L_30 = V_2;
+		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_28 = __this->get_fuel_11();
+		Il2CppChar L_29 = V_2;
 		IL2CPP_RUNTIME_CLASS_INIT(Char_tFF60D8E7E89A20BE2294A003734341BD1DF43E14_il2cpp_TypeInfo_var);
-		String_t* L_31;
-		L_31 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_30, /*hidden argument*/NULL);
-		FuelHandler_UpdateTextTyped_m4C4BA60341A89DBDD3F6176EB1FA56896F4010C2(L_29, L_31, /*hidden argument*/NULL);
+		String_t* L_30;
+		L_30 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_29, /*hidden argument*/NULL);
+		FuelHandler_UpdateTextTyped_m4C4BA60341A89DBDD3F6176EB1FA56896F4010C2(L_28, L_30, /*hidden argument*/NULL);
+		// fuel.UpdateText(Char.ToString(letterPressed));// increment the text that the user should to type
+		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_31 = __this->get_fuel_11();
+		Il2CppChar L_32 = V_2;
+		String_t* L_33;
+		L_33 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_32, /*hidden argument*/NULL);
+		FuelHandler_UpdateText_mDCC7BDE0ECA2EE9F19E7500604B60EA297C56C68(L_31, L_33, /*hidden argument*/NULL);
 	}
 
-IL_00d2:
+IL_00df:
 	{
 		// is_letter_false=false; // reset is_letter_false to false for the new letter
 		__this->set_is_letter_false_19((bool)0);
 		// }
-		goto IL_0129;
+		goto IL_015e;
 	}
 
-IL_00db:
+IL_00e8:
 	{
 		// letters[currentIndex].GetComponent<Image>().color = Color.red;
-		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_32 = __this->get_letters_12();
-		int32_t L_33 = __this->get_currentIndex_13();
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_34;
-		L_34 = List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_inline(L_32, L_33, /*hidden argument*/List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_RuntimeMethod_var);
-		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_35;
-		L_35 = GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710(L_34, /*hidden argument*/GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710_RuntimeMethod_var);
-		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_36;
-		L_36 = Color_get_red_m9BD55EBF7A74A515330FA5F7AC7A67C8A8913DD8(/*hidden argument*/NULL);
-		VirtActionInvoker1< Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_35, L_36);
+		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_34 = __this->get_letters_12();
+		int32_t L_35 = __this->get_currentIndex_13();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_36;
+		L_36 = List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_inline(L_34, L_35, /*hidden argument*/List_1_get_Item_m1E85E7CDA3459102B9FD665388559843378C2B4C_RuntimeMethod_var);
+		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_37;
+		L_37 = GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710(L_36, /*hidden argument*/GameObject_GetComponent_TisImage_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_m16ABC1D7B4E804984517841F8D26E9C769FAE710_RuntimeMethod_var);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_38;
+		L_38 = Color_get_red_m9BD55EBF7A74A515330FA5F7AC7A67C8A8913DD8(/*hidden argument*/NULL);
+		VirtActionInvoker1< Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_37, L_38);
 		// errors+=1;
-		int32_t L_37 = __this->get_errors_18();
-		__this->set_errors_18(((int32_t)il2cpp_codegen_add((int32_t)L_37, (int32_t)1)));
+		int32_t L_39 = __this->get_errors_18();
+		__this->set_errors_18(((int32_t)il2cpp_codegen_add((int32_t)L_39, (int32_t)1)));
 		// if(!is_letter_false){ // if it is the first time the user type a false key for that letter
-		bool L_38 = __this->get_is_letter_false_19();
-		if (L_38)
+		bool L_40 = __this->get_is_letter_false_19();
+		if (L_40)
 		{
-			goto IL_0129;
+			goto IL_015e;
 		}
 	}
 	{
 		// is_letter_false=true; // set to true so we don't add multiple times the wrong letter
 		__this->set_is_letter_false_19((bool)1);
 		// fuel.UpdateTextTyped(Char.ToString(letterPressed));  // add the error to the text typed
-		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_39 = __this->get_fuel_11();
-		Il2CppChar L_40 = V_2;
+		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_41 = __this->get_fuel_11();
+		Il2CppChar L_42 = V_2;
 		IL2CPP_RUNTIME_CLASS_INIT(Char_tFF60D8E7E89A20BE2294A003734341BD1DF43E14_il2cpp_TypeInfo_var);
-		String_t* L_41;
-		L_41 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_40, /*hidden argument*/NULL);
-		FuelHandler_UpdateTextTyped_m4C4BA60341A89DBDD3F6176EB1FA56896F4010C2(L_39, L_41, /*hidden argument*/NULL);
+		String_t* L_43;
+		L_43 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_42, /*hidden argument*/NULL);
+		FuelHandler_UpdateTextTyped_m4C4BA60341A89DBDD3F6176EB1FA56896F4010C2(L_41, L_43, /*hidden argument*/NULL);
+		// fuel.UpdateText(Char.ToString(words[currentWord][currentIndex]));// increment the text that the user should to type
+		FuelHandler_t3E2574982D96019D4AC5057ED8ACB190D72DDC70 * L_44 = __this->get_fuel_11();
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_45 = __this->get_words_16();
+		int32_t L_46 = __this->get_currentWord_14();
+		int32_t L_47 = L_46;
+		String_t* L_48 = (L_45)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_47));
+		int32_t L_49 = __this->get_currentIndex_13();
+		Il2CppChar L_50;
+		L_50 = String_get_Chars_m9B1A5E4C8D70AA33A60F03735AF7B77AB9DBBA70(L_48, L_49, /*hidden argument*/NULL);
+		String_t* L_51;
+		L_51 = Char_ToString_mCCD91C745EEDC81490566AAC095F5758F80077F7(L_50, /*hidden argument*/NULL);
+		FuelHandler_UpdateText_mDCC7BDE0ECA2EE9F19E7500604B60EA297C56C68(L_44, L_51, /*hidden argument*/NULL);
 	}
 
-IL_0129:
+IL_015e:
 	{
 		// if(words[currentWord].Length <= currentIndex){
-		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_42 = __this->get_words_16();
-		int32_t L_43 = __this->get_currentWord_14();
-		int32_t L_44 = L_43;
-		String_t* L_45 = (L_42)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_44));
-		int32_t L_46;
-		L_46 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_45, /*hidden argument*/NULL);
-		int32_t L_47 = __this->get_currentIndex_13();
-		if ((((int32_t)L_46) > ((int32_t)L_47)))
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_52 = __this->get_words_16();
+		int32_t L_53 = __this->get_currentWord_14();
+		int32_t L_54 = L_53;
+		String_t* L_55 = (L_52)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_54));
+		int32_t L_56;
+		L_56 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_55, /*hidden argument*/NULL);
+		int32_t L_57 = __this->get_currentIndex_13();
+		if ((((int32_t)L_56) > ((int32_t)L_57)))
 		{
-			goto IL_0192;
+			goto IL_01c7;
 		}
 	}
 	{
 		// int totalLength = words[currentWord].Length;
-		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_48 = __this->get_words_16();
-		int32_t L_49 = __this->get_currentWord_14();
-		int32_t L_50 = L_49;
-		String_t* L_51 = (L_48)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_50));
-		int32_t L_52;
-		L_52 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_51, /*hidden argument*/NULL);
-		V_3 = L_52;
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_58 = __this->get_words_16();
+		int32_t L_59 = __this->get_currentWord_14();
+		int32_t L_60 = L_59;
+		String_t* L_61 = (L_58)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_60));
+		int32_t L_62;
+		L_62 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_61, /*hidden argument*/NULL);
+		V_3 = L_62;
 		// GainFuel(totalLength, errors);
-		int32_t L_53 = V_3;
-		int32_t L_54 = __this->get_errors_18();
-		WordGenerator_GainFuel_m65DBE4E639595BCA93FC55676BD634DC5F4D28A7(__this, L_53, L_54, /*hidden argument*/NULL);
+		int32_t L_63 = V_3;
+		int32_t L_64 = __this->get_errors_18();
+		WordGenerator_GainFuel_m65DBE4E639595BCA93FC55676BD634DC5F4D28A7(__this, L_63, L_64, /*hidden argument*/NULL);
 		// errors=0;
 		__this->set_errors_18(0);
 		// currentWordStarted=false;
 		__this->set_currentWordStarted_15((bool)0);
 		// currentWord  = UnityEngine.Random.Range(0, words.Length);
-		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_55 = __this->get_words_16();
-		int32_t L_56;
-		L_56 = Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A(0, ((int32_t)((int32_t)(((RuntimeArray*)L_55)->max_length))), /*hidden argument*/NULL);
-		__this->set_currentWord_14(L_56);
+		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_65 = __this->get_words_16();
+		int32_t L_66;
+		L_66 = Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A(0, ((int32_t)((int32_t)(((RuntimeArray*)L_65)->max_length))), /*hidden argument*/NULL);
+		__this->set_currentWord_14(L_66);
 		// currentIndex=0;
 		__this->set_currentIndex_13(0);
 		// DestroyList();
 		WordGenerator_DestroyList_mADFC7CA186CE13660776B10CAE2F8F8CB48ECA0D(__this, /*hidden argument*/NULL);
 	}
 
-IL_0192:
+IL_01c7:
 	{
-		int32_t L_57 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_57, (int32_t)1));
+		int32_t L_67 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_67, (int32_t)1));
 	}
 
-IL_0196:
+IL_01cb:
 	{
 		// foreach (char letterPressed in Input.inputString)
-		int32_t L_58 = V_1;
-		String_t* L_59 = V_0;
-		int32_t L_60;
-		L_60 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_59, /*hidden argument*/NULL);
-		if ((((int32_t)L_58) < ((int32_t)L_60)))
+		int32_t L_68 = V_1;
+		String_t* L_69 = V_0;
+		int32_t L_70;
+		L_70 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_69, /*hidden argument*/NULL);
+		if ((((int32_t)L_68) < ((int32_t)L_70)))
 		{
-			goto IL_0057;
+			goto IL_0064;
 		}
 	}
 	{
@@ -8916,6 +8950,13 @@ IL_0030:
 		return L_13;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline (String_t* __this, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = __this->get_m_stringLength_0();
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
 {
 	{
@@ -9050,13 +9091,6 @@ IL_0015:
 	{
 		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_5 = V_0;
 		return L_5;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline (String_t* __this, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = __this->get_m_stringLength_0();
-		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_mF00B574E58FB078BB753B05A3B86DD0A7A266B63_gshared_inline (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, int32_t ___index0, const RuntimeMethod* method)

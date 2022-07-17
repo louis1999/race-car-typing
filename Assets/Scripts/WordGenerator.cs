@@ -61,8 +61,11 @@ public class WordGenerator : MonoBehaviour
             if(!currentWordStarted){
                 GenerateWord(words[currentWord]);
                 currentWordStarted=true;
-                fuel.UpdateText(" ");
-                fuel.UpdateTextTyped(" ");
+                if(!fuel.FirstCharacter()){
+                    fuel.UpdateText(" ");
+                    fuel.UpdateTextTyped(" ");
+                }
+                
             }
         }
        
@@ -74,9 +77,9 @@ public class WordGenerator : MonoBehaviour
                 letters[currentIndex].GetComponent<Image>().color = Color.green;
                 currentIndex++; // we increment the value here, so the user has to type the letter again if he is false
 
-                fuel.UpdateText(Char.ToString(letterPressed));// increment the text that the user should to type
                 if(!is_letter_false){
                     fuel.UpdateTextTyped(Char.ToString(letterPressed)); // increment the text the user is typing
+                    fuel.UpdateText(Char.ToString(letterPressed));// increment the text that the user should to type
                 }
                 is_letter_false=false; // reset is_letter_false to false for the new letter
 
@@ -88,6 +91,8 @@ public class WordGenerator : MonoBehaviour
                 if(!is_letter_false){ // if it is the first time the user type a false key for that letter
                     is_letter_false=true; // set to true so we don't add multiple times the wrong letter
                     fuel.UpdateTextTyped(Char.ToString(letterPressed));  // add the error to the text typed
+                    fuel.UpdateText(Char.ToString(words[currentWord][currentIndex]));// increment the text that the user should to type
+
                 }
             }
 

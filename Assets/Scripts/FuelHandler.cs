@@ -86,6 +86,9 @@ public class FuelHandler : MonoBehaviour
         text_typed = text_typed + letter;
     }
 
+    public bool FirstCharacter(){
+        return text.Length==0;
+    }
 
 
     void OnDisable()

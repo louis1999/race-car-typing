@@ -2,3 +2,5 @@
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"all_tundra_nodes","enqueuedNodeIndex":0}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteResponseFile artifacts/rsp/14695272917401232087.rsp","enqueuedNodeIndex":1,"enqueueingNodeAnnotation":"all_tundra_nodes","enqueueingNodeIndex":0}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"Il2Cpp /Users/louisdaisomont/Desktop/race-car-typing/Library/Il2cppBuildCache/WebGL/Native/build.bc","enqueuedNodeIndex":2,"enqueueingNodeAnnotation":"all_tundra_nodes","enqueueingNodeIndex":0}
+{"msg":"inputSignatureChanged","annotation":"Il2Cpp /Users/louisdaisomont/Desktop/race-car-typing/Library/Il2cppBuildCache/WebGL/Native/build.bc","index":2,"changes":[{"key":"InputFileDigest","path":"/Users/louisdaisomont/Desktop/race-car-typing/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll","dependency":"explicit"}]}
+{"msg":"noderesult","annotation":"Il2Cpp /Users/louisdaisomont/Desktop/race-car-typing/Library/Il2cppBuildCache/WebGL/Native/build.bc","index":2,"exitcode":0}
